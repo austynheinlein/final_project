@@ -1,0 +1,57 @@
+* {
+  /* border: 1px solid gold; */
+}
+.container, body{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.logoimg {
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+.yuki {
+  width: 200px;
+  height: auto;
+  padding: 10px 10px 0px 10px;
+}
+.map {
+ width: 100%;
+ background: #7ca95e;
+ margin: 10px 10px 0 10px;
+
+
+ color: white;
+}
+.main {
+  height: 250px;
+  width: 100%;
+
+
+  color: grey;
+}
+.footer {
+  background: #774c4b;
+  width: 100%;
+  height: 100px;
+
+
+  color: white;
+
+}
+/* ------------------------------- */
+@media screen and (min-width: 757px) {
+
+}
