@@ -49,7 +49,7 @@ class Trails extends React.Component {
         ]
       })
     })
-  })
+  }
 
   handleCreate(trail){
     this.setState({
@@ -141,7 +141,7 @@ class Trails extends React.Component {
           : ''
         }
       </div>
-      
+
     )
   }
 
