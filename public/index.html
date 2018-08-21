@@ -2,24 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Trails for Tails</title>
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
-    <script type="text/babel" src="js/TrailForm.js"></script>
-    <script type="text/babel" src="js/TrailsList.js"></script>
-    <script type="text/babel" src="js/Trail.js"></script>
-    <script type="text/babel" src="js/Trails.js"></script>
-    <script type="text/babel" src="js/app.js"></script>
 
     <link rel="icon"
       type="image/png"
       href="party.png" />
 
-    <title>Trails for Tails</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+      <script type="text/babel" src="js/TrailForm.js"></script>
+      <script type="text/babel" src="js/TrailsList.js"></script>
+      <script type="text/babel" src="js/Trail.js"></script>
+      <script type="text/babel" src="js/Trails.js"></script>
+      <script type="text/babel" src="js/app.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -28,18 +28,73 @@
           <img class="icon" src="t4t.png" alt="trails4tails logo">
           <img class="yuki" src="yuki.jpg" alt="dog">
         </div>
-        <div class="map">
-          Map will Go Here.
-        </div>
+
+        <!-- map items -->
+        <div id="map"></div>
+         <script>
+           function initMap() {
+             var myLatLng = {lat: 38.5816, lng: -121.4944};
+
+             // Create a map object and specify the DOM element
+             // for display.
+             let map = new google.maps.Map(document.getElementById('map'), {
+               center: myLatLng,
+               zoom: 12
+             });
+
+
+             let title;
+             positions = [
+               {
+                 lat: 47.608540,
+                 lng: -121.489356,
+                 title: "Icicle Gorge Loop"
+               },
+               {
+                 lat: 47.802310,
+                 lng: -120.89449,
+                 title: "Lake Valhalla"
+               },
+               {
+                 lat: 47.397252,
+                 lng: -120.329667,
+                 title: "Saddlerock Trail"
+               }
+             ]
+
+             positions.forEach(function(position){
+               let marker = new google.maps.Marker({
+                 position: {
+                   lat: position.lat,
+                   lng: position.lng
+                 },
+                 map: map,
+                 title: position.title
+               });
+               let infowindow = new google.maps.InfoWindow({
+                 content: position.title
+               });
+               marker.addListener("click", function(){
+                 infowindow.open(map, marker);
+               });
+             });
+
+           }
+
+         </script>
+
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-qhD5oMdiXbhoqd_9-iuxzBP4z8jfM00&callback=initMap"
+        type="text/javascript"></script>
       </div>
 
       <div class="main">
-        List of trails will go here. (react code)
+        <!-- List of trails will go here. (react code) -->
       </div>
 
       <div class="footer">
-        this is the footer
+        <h4>Built by Austyn Heinlein</h4>
       </div>
     </div>
+
   </body>
 </html>
