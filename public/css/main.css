@@ -129,24 +129,48 @@ input[type=submit] {
 }
 .trailsList {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.searchtools{
+  display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .listitem{
-  background: #f3f4ef
+  background: white;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 410px;
+  margin: 5px;
 }
-tr {
+tbody {
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: #f3f4ef;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+tr {
   margin: 10px 25px;
   min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+td {
+  margin: 5px;
 }
 .imgsize {
   height: 100px;
   width: 130px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 .bizimg {
   margin: 5px;
@@ -160,8 +184,9 @@ tr {
 }
 .bizinfo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 5px;
 }
 .name {
@@ -186,34 +211,30 @@ tr {
 }
 .buttons{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
 }
 .edit, .delete {
-  margin: 5px;
-  padding: 8px;
-  width: 55px;
+  margin: 0px;
+  padding: 20px;
   text-align: center;
   border: none;
-  color: white;
+  background: #3a3a3a;
   align-items: center;
   justify-content: center;
-}
-.edit {
-  background: #6a8742;
-}
-.edit:hover{
-  background: #99b76f;
-}
-.delete {
-  background: #5c4d60;
-}
-.delete:hover{
-  background: #84698c;
-}
-tr h3 {
-  text-align: center;
+  color: white;
+  border-radius: 4px;
 }
 
+tr h3 {
+  text-align: center;
+  margin: 10px 0px;
+}
+.region {
+  display: flex;
+  flex-direction: column;
+}
 .search_filter {
   width: 250px;
   padding: 10px;

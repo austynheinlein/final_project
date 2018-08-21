@@ -73,7 +73,7 @@ class Trails extends React.Component {
       this.handleCreate(jsonedTrail)
       this.toggleState('addTrailIsVisible', 'trailsListIsVisible')
     })
-    .catch(error => console.log(error))
+    
   }
 
   getTrail(trail){

@@ -27,32 +27,37 @@ class TrailsList extends React.Component {
 
     return (
       <div className='trailsList'>
-        <input
-          type="text"
-          value={this.state.search}
-          onChange={this.updateSearch}
-          className="search_filter"
-          placeholder="Search..."
-        />
-        <div className='zones'>
-            <button
-              value="Central Cascades"
-              onClick={this.updateSearch}
-              className="search_filter">
-              Central Cascades
-            </button>
-            <button
-              value="North Cascades"
-              onClick={this.updateSearch}
-              className="search_filter">
-              North Cascades
-            </button>
-            <button
-              value="Olympic Peninsula"
-              onClick={this.updateSearch}
-              className="search_filter">
-              Olympic Peninsula
-            </button>
+
+        <div className='searchtools'>
+
+          <input
+              type="text"
+              value={this.state.search}
+              onChange={this.updateSearch}
+              className="search_filter"
+              placeholder="Search..."
+          />
+          <div className='zones'>
+              <button
+                value="Central Cascades"
+                onClick={this.updateSearch}
+                className="search_filter">
+                Central Cascades
+              </button>
+              <button
+                value="North Cascades"
+                onClick={this.updateSearch}
+                className="search_filter">
+                North Cascades
+              </button>
+              <button
+                value="Olympic Peninsula"
+                onClick={this.updateSearch}
+                className="search_filter">
+                Olympic Peninsula
+              </button>
+          </div>
+
         </div>
 
 
@@ -79,6 +84,13 @@ class TrailsList extends React.Component {
                             {trail.location}
                           </h3>
                         </td>
+
+                        <td>
+                          <h3>
+                            Miles: {trail.mileage}
+                          </h3>
+                        </td>
+
                       </div>
                     </div>
 
