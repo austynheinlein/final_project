@@ -22,17 +22,29 @@ class TrailsList extends React.Component {
       }
     )
     return (
-      <div className='listitem'>
+      <div className='trailsList'>
+        <input
+          type="text"
+          value={this.state.search}
+          onChange={this.updateSearch}
+          className="search_filter"
+          placeholder="Search..."
+        />
+          <table>
+            <tbody>
+              {filteredTrails.map( (trail, index) => {
+                return (
+                <div className='listitem'>
                   <tr>
                     <div className='bizinfo'>
                         <td className='imgsize'>
-                          <img className='bizimg' src={trail.image} alt={trail.name}
+                          <img className='bizimg' src={trail.image} alt={trail.company_name}
                           onClick={()=> {this.props.getTrail(trail); this.props.toggleState('trailsListIsVisible', 'trailIsVisible')}} />
                         </td>
 
-                      <div className='address'>
+                      <div className='region'>
                         <td>
-                          <h3 className='name' onClick={()=> {this.props.getTrail(trail); this.props.toggleState('trailsListIsVisible', 'trailIsVisible')}}>{trail.namename}</h3>
+                          <h3 className='name' onClick={()=> {this.props.getTrail(trail); this.props.toggleState('trailsListIsVisible', 'trailIsVisible')}}>{trail.name}</h3>
                         </td>
 
                         <td>
@@ -54,6 +66,10 @@ class TrailsList extends React.Component {
                   </tr>
                 </div>
                 )
-              }
-            }
-          
+              })}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+}
