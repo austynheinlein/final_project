@@ -14,13 +14,17 @@ class TrailsList extends React.Component {
   }
 
   render() {
+    console.log(this.props.trails);
     let filteredTrails =
     this.props.trails.filter(
       (trail)=> {
-        return
-        trail.location.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || trail.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        console.log(this.state.search);
+        console.log(trail.location);
+        return trail.location === this.state.search || trail.name === this.state.search
       }
     )
+    console.log(filteredTrails);
+
     return (
       <div className='trailsList'>
         <input
@@ -30,9 +34,32 @@ class TrailsList extends React.Component {
           className="search_filter"
           placeholder="Search..."
         />
+        <div className='zones'>
+            <button
+              value="Central Cascades"
+              onClick={this.updateSearch}
+              className="search_filter">
+              Central Cascades
+            </button>
+            <button
+              value="North Cascades"
+              onClick={this.updateSearch}
+              className="search_filter">
+              North Cascades
+            </button>
+            <button
+              value="Olympic Peninsula"
+              onClick={this.updateSearch}
+              className="search_filter">
+              Olympic Peninsula
+            </button>
+        </div>
+
+
           <table>
             <tbody>
               {filteredTrails.map( (trail, index) => {
+                console.log(trail);
                 return (
                 <div className='listitem'>
                   <tr>

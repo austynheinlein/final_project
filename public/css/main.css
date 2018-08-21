@@ -53,11 +53,20 @@ body {
 }
 main {
   display: flex;
+  justify-content: flex-start;
   margin-bottom: 100px;
   margin: 15px 20px 150px 20px;
   color: #3a3a3a;
 }
-
+/* trail.js show */
+.individual img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  margin-top: 30px;
+}
 /* trails.js *********************************** */
 .trails {
   display: flex;
@@ -114,6 +123,10 @@ input[type=submit] {
 }
 
 /* list ----------------------------- */
+.zones {
+  display: flex;
+  flex-direction: column;
+}
 .trailsList {
   display: flex;
   flex-direction: column;

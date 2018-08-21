@@ -2,7 +2,7 @@ class Trail extends React.Component {
   render() {
     return (
       <div className='show'>
-        <button className='fullList' onClick={()=>this.props.toggleState('trails', 'trailIsVisible')}>See Full Trail List</button>
+
 
         <div className='individual'>
               <img src={this.props.trail.image} alt={this.props.trail.name}/>
@@ -12,6 +12,9 @@ class Trail extends React.Component {
               <p> Region: {this.props.trail.location}</p>
 
               <p> Mileage: {this.props.trail.mileage}</p>
+
+              <a href=".">Back</a>
+
         </div>
 
         {this.props.editTrailIsVisible ?
