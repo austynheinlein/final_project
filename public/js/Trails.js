@@ -109,9 +109,8 @@ class Trails extends React.Component {
 
       <div className='trails'>
         <h3 className='local'> Dog Friendly Trails </h3>
-        <div className='addtrailbtn'>
-          <button className='addbtn' onClick={()=>this.toggleState('addTrailIsVisible', 'trailsListIsVisible')}>Add a Trail</button>
-        </div>
+        <button className='addbtn' onClick={()=>this.toggleState('addTrailIsVisible', 'trailsListIsVisible')}>Add a Trail</button>
+
         {this.state.trailsListIsVisible ?
           <TrailsList
             toggleState={this.toggleState}

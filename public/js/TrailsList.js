@@ -38,7 +38,7 @@ class TrailsList extends React.Component {
                   <tr>
                     <div className='bizinfo'>
                         <td className='imgsize'>
-                          <img className='bizimg' src={trail.image} alt={trail.company_name}
+                          <img className='bizimg' src={trail.image} alt={trail.name}
                           onClick={()=> {this.props.getTrail(trail); this.props.toggleState('trailsListIsVisible', 'trailIsVisible')}} />
                         </td>
 

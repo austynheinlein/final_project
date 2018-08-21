@@ -35,9 +35,9 @@ class TrailForm extends React.Component {
   render(){
     return (
       <div className='form'>
-        <form className='pure-form pure-form-aligned' onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
 
-            <div className='pure-control-group'>
+            <div>
                 <label className='label' for='image'> Image </label>
                 <input className='input' type='text' id='image'
                   onChange={this.handleChange}
@@ -47,7 +47,7 @@ class TrailForm extends React.Component {
 
           <br/>
 
-            <div className='pure-control-group'>
+            <div>
                 <label className='label' for='name'> Name </label>
                 <input className='input' type='text' id='name'
                   onChange={this.handleChange}
@@ -57,7 +57,7 @@ class TrailForm extends React.Component {
 
           <br/>
 
-            <div className='pure-control-group'>
+            <div>
                 <label className='label' for='location'> Region </label>
                 <input className='input' type='text' id='location'
                   onChange={this.handleChange}
@@ -67,7 +67,7 @@ class TrailForm extends React.Component {
 
           <br/>
 
-            <div className='pure-control-group'>
+            <div>
                 <label className='label' for='mileage'> Mileage </label>
                 <input className='input' type='text' id='mileage'
                   onChange={this.handleChange}
@@ -77,7 +77,7 @@ class TrailForm extends React.Component {
 
           <br/>
 
-            <div className='pure-controls'>
+            <div>
               <input type="submit" value="Submit" />
             </div>
 

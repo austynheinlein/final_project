@@ -54,8 +54,20 @@ main {
   color: #3a3a3a;
 }
 
+/* trails.js *********************************** */
+.trails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.addbtn {
+  padding: 5px;
+  width: 100px;
+}
+
 /* LIST *********************************** */
-.locationsList {
+.trailsList {
   display: flex;
   flex-direction: column;
   justify-content: center;
