@@ -35,7 +35,7 @@ class TrailForm extends React.Component {
   render(){
     return (
       <div className='form'>
-        <form onSubmit={this.handleSubmit}>
+        <form className='inputform' onSubmit={this.handleSubmit}>
 
             <div>
                 <label className='label' for='image'> Image </label>
@@ -78,7 +78,7 @@ class TrailForm extends React.Component {
           <br/>
 
             <div>
-              <input type="submit" value="Submit" />
+              <input className="submitbtn" type="submit" value="Submit" />
             </div>
 
         </form>

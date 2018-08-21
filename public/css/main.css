@@ -1,6 +1,12 @@
 * {
   /* border: 1px solid gold; */
 }
+button:focus {
+  outline:0;
+}
+input {
+ outline:none;
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -43,13 +49,11 @@ body {
  height: 441px;
  background: #7ca95e;
  margin: 10px 10px 0 10px;
-
-
- color: white;
+ color: #3a3a3a;
 }
 main {
   display: flex;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   margin: 15px 20px 150px 20px;
   color: #3a3a3a;
 }
@@ -60,13 +64,56 @@ main {
   flex-direction: column;
   width: 100%;
 }
-
+.local {
+  font-size: 22px;
+}
 .addbtn {
-  padding: 5px;
+  padding: 8px;
   width: 100px;
+  background-color: #7ca95e;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+.addbtn:hover {
+  background-color: #93c174;
+}
+/* trailform.js ---------------------------  */
+.form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #774c4b;
+  border-radius: 4px;
+}
+.inputform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input[type=submit] {
+  padding: 5px;
+  width: 80px;
+  background-color: #a39fa5;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 5px;
+}
+.cancel {
+  padding: 5px;
+  width: 80px;
+  background-color: #774c4b;
+  border: none;
+  border-radius: 4px;
+  color: white;
 }
 
-/* LIST *********************************** */
+/* list ----------------------------- */
 .trailsList {
   display: flex;
   flex-direction: column;
@@ -155,15 +202,15 @@ tr h3 {
 }
 
 .search_filter {
-  width: 30%;
-  padding: .5em .6em;
+  width: 250px;
+  padding: 10px;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 3px #ddd;
   border-radius: 4px;
   vertical-align: middle;
   box-sizing: border-box;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 /* footer ----------------------  */
@@ -182,6 +229,9 @@ tr h3 {
   margin-top: 20px;
   max-height: 150px;
   color: white;
+}
+.footer h4 {
+  font-weight: normal;
 }
 /* ------------------------------- */
 @media screen and (min-width: 757px) {
