@@ -18,18 +18,23 @@ class Trails extends React.Component {
   }
 
   handleUpdateSubmit(trail){
+    console.log(trail);
+    console.log(JSON.stringify(trail));
+    const jsonTrail = JSON.stringify(trail)
     fetch('/trails/' + trail.id, {
-      body: JSON.stringify(trail),
+      body: jsonTrail,
       method: 'PUT',
       headers: {
-        "Accept": 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json"
       }
     })
     .then(updatedTrail => {
+      console.log('updatedTrail', updatedTrail);
       return updatedTrail.json()
     })
     .then(jsonedTrail => {
+      console.log('abcd');
       this.getTrails()
       this.toggleState('trailsListIsVisible', 'trailIsVisible')
     })
@@ -73,7 +78,7 @@ class Trails extends React.Component {
       this.handleCreate(jsonedTrail)
       this.toggleState('addTrailIsVisible', 'trailsListIsVisible')
     })
-    
+
   }
 
   getTrail(trail){

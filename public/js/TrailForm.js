@@ -13,6 +13,7 @@ class TrailForm extends React.Component {
   componentDidMount(){
     if(this.props.trail){
       this.setState({
+        id: this.props.trail.id,
         image: this.props.trail.image,
         name: this.props.trail.name,
         location: this.props.trail.location,
@@ -28,6 +29,7 @@ class TrailForm extends React.Component {
   }
 
   handleSubmit(event){
+    console.log(this.state, 'handle submit');
     event.preventDefault()
     this.props.handleSubmit(this.state)
   }

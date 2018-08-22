@@ -26,7 +26,7 @@ class Trail
     results = DB.exec(
       <<-SQL
         INSERT INTO trails (image, name, location, mileage)
-        VALUES ('#{opts["image"]}', '#{opts["name"]}', '#{opts["location"]}', '#{opts["mileage"]}')
+        VALUES ('#{opts["image"]}', '#{opts["name"]}', '#{opts["location"]}', #{opts["mileage"]})
         RETURNING id, image, name, location, mileage;
       SQL
     )
@@ -48,7 +48,7 @@ class Trail
   def self.update(id, opts)
     results = DB.exec(
       <<-SQL
-        UPDATE locations
+        UPDATE trails
         SET image='#{opts["image"]}', name='#{opts["name"]}', location='#{opts["location"]}', mileage='#{opts["mileage"]}'
         WHERE id=#{id}
         RETURNING id, image, name, location, mileage;
