@@ -1,4 +1,4 @@
-![Optional Text](t4t.png)
+![Optional Text](public/t4t.png)
 # Final Project - Austyn Heinlein
 ## General Assembly - Web Development Immersive Course
 
