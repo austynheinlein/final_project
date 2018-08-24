@@ -22,6 +22,7 @@ a{
   color: white;
   text-decoration: none;
 }
+
 .container, body{
   display: flex;
   flex-direction: column;
